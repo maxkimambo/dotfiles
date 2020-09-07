@@ -124,6 +124,8 @@ alias refresh="source ~/.zshrc"
 alias pbc="pbcopy"
 alias pbp="pbpaste"
 alias autofinder="code $HOME/dev/github.com/maxkimambo/autofinder.code-workspace"
+alias up="docker-compose up"
+alias down="docker-compose down"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -172,3 +174,5 @@ export SDKMAN_DIR="/Users/max/.sdkman"
 remove_images() {
     docker images --format "table {{.ID}}\t{{.Repository}}" |grep -i "$1" | awk '{print $1}' |xargs docker rmi -f
 }
+
+
