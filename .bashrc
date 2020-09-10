@@ -119,7 +119,7 @@ fi
 # env variables 
 
 export GITHUB="$HOME/dev/github.com/maxkimambo"
-
+export PATH="$GITHUB/bin:$PATH"
 # custom aliases section 
 
 alias gs="git status"
@@ -129,10 +129,11 @@ alias gl="git log --oneline"
 alias glb="git log --branches=* --oneline"
 
 alias dev="cd $GITHUB"
-alias notes="code $GITHUB/notes"
+alias notes="code -n $GITHUB/notes/"
 alias profile="code $GITHUB/dotfiles/.bashrc"
 alias refresh="source $GITHUB/dotfiles/.bashrc"
-
+alias project="code $GITHUB/autofinder/autofinder_project.code-workspace"
+alias dc="docker-compose"
 # end custom aliases 
 
 
