@@ -135,8 +135,11 @@ alias refresh="source $GITHUB/dotfiles/.bashrc"
 alias project="code $GITHUB/autofinder/autofinder_project.code-workspace"
 alias dc="docker-compose"
 alias images="docker images"
-
 alias new_env="conda create python=3.8 --name"
+alias ..="cd .."
+alias ...="cd ../.."
+alias .="pwd"
+
 # end custom aliases 
 
 # >>> conda initialize >>>
