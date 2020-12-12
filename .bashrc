@@ -121,7 +121,9 @@ fi
 export GITHUB="$HOME/dev/github.com/maxkimambo"
 export PATH="$GITHUB/bin:$PATH"
 # custom aliases section 
-
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 alias gs="git status"
 alias commit="git commit -m"
 alias push="git push"

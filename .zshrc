@@ -2,7 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/max/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
+
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -69,12 +70,15 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
-    docker
-    zsh-syntax-highlighting
-    zsh-autosuggestions)
+    docker)
+    # zsh-syntax-highlighting
+    # zsh-autosuggestions)
 
 ZSH_DISABLE_COMPFIX="true"
+
+
 source $ZSH/oh-my-zsh.sh
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -131,15 +135,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
-export SCALEWAY_ORGANIZATION=1e3cab47-d5b8-4558-bd9a-21925f904bce
-export SCALEWAY_ACCESS_KEY=34500a36-9196-4a24-87a4-e05541631fe6
-
-export SCW_ACCESS_KEY=SCW645BEV359W76372MV 
-export SCW_SECRET_KEY=9e15f254-a156-4c54-9242-6a8cd3ba6ab6
-
-export HCLOUD_TOKEN=wmTuYzmzTyEez4QBAvmZpaTiFbvyhD9xdF0XZfYkNP6jkDToEalQOwttRFRPlaDE
-export GOOGLE_APPLICATION_CREDENTIALS="/Users/max/dev/autofinder/infrastructure/service-account.json"
 
 export GOPATH=$HOME/dev/go
 export GOROOT=/usr/local/opt/go/libexec
