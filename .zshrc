@@ -120,6 +120,7 @@ alias gl="git log --oneline"
 alias glb="git log --branches=* --oneline"
 # alias notes="code ~/dev/notes"
 alias katas="code ~/dev/codekatas/python"
+alias dev=$GITHUB
 
 alias profile="code ~/.zshrc"
 alias images="docker images"
