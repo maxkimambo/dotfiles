@@ -105,8 +105,24 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias todo="code $HOME/notes/todo.txt"
-alias notes="code $HOME/notes"
+# env variables 
+export GITHUB="$HOME/dev/github.com/maxkimambo"
+export PATH="$GITHUB/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export GOPATH=$HOME/dev/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+
+#JAVA 
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-13.0.2.jdk/Contents/Home
+export M2_HOME=/usr/local/Cellar/maven/3.6.3/libexec
+export PATH=$PATH:M2_HOME/bin
+
+alias todo="code $HOME/notes/todos.txt"
 # alias secret="echo $(kubectl get serviceaccount default -o jsonpath='{.secrets[0].name}')"
 # alias token="$(kubectl get secret $(kubectl get serviceaccount default -o jsonpath='{.secrets[0].name}')  -o jsonpath='{.data.token}' | base64 --decode)"
 alias tf="terraform"
@@ -118,7 +134,6 @@ alias add="git add ."
 alias push="git push"
 alias gl="git log --oneline"
 alias glb="git log --branches=* --oneline"
-# alias notes="code ~/dev/notes"
 alias katas="code ~/dev/codekatas/python"
 alias dev=$GITHUB
 
@@ -132,20 +147,28 @@ alias autofinder="code $HOME/dev/github.com/maxkimambo/autofinder.code-workspace
 alias up="docker-compose up"
 alias down="docker-compose down"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# custom aliases section 
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias gs="git status"
+alias push="git push"
+alias gl="git log --oneline"
+alias glb="git log --branches=* --oneline"
+
+alias dev="cd $GITHUB"
+alias notes="code -n $GITHUB/notes/"
+alias profile="code $GITHUB/dotfiles/.bashrc"
+alias refresh="source $GITHUB/dotfiles/.bashrc"
+alias project="code $GITHUB/autofinder/autofinder_project.code-workspace"
+alias dc="docker-compose"
+alias images="docker images"
+alias new_env="conda create python=3.8 --name"
+alias ..="cd .."
+alias ...="cd ../.."
+alias .="pwd"
 
 
-export GOPATH=$HOME/dev/go
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
-
-#JAVA 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-13.0.2.jdk/Contents/Home
-export M2_HOME=/usr/local/Cellar/maven/3.6.3/libexec
-export PATH=$PATH:M2_HOME/bin
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/max/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
