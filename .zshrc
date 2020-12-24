@@ -2,7 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/max/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
+
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -69,12 +70,15 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
-    docker
-    zsh-syntax-highlighting
-    zsh-autosuggestions)
+    docker)
+    # zsh-syntax-highlighting
+    # zsh-autosuggestions)
 
 ZSH_DISABLE_COMPFIX="true"
+
+
 source $ZSH/oh-my-zsh.sh
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -83,11 +87,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='code'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -101,8 +105,24 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias todo="code $HOME/notes/todo.txt"
-alias notes="code $HOME/notes"
+# env variables 
+export GITHUB="$HOME/dev/github.com/maxkimambo"
+export PATH="$GITHUB/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export GOPATH=$HOME/dev/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+
+#JAVA 
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-13.0.2.jdk/Contents/Home
+export M2_HOME=/usr/local/Cellar/maven/3.6.3/libexec
+export PATH=$PATH:M2_HOME/bin
+
+alias todo="code $HOME/notes/todos.txt"
 # alias secret="echo $(kubectl get serviceaccount default -o jsonpath='{.secrets[0].name}')"
 # alias token="$(kubectl get secret $(kubectl get serviceaccount default -o jsonpath='{.secrets[0].name}')  -o jsonpath='{.data.token}' | base64 --decode)"
 alias tf="terraform"
@@ -114,8 +134,8 @@ alias add="git add ."
 alias push="git push"
 alias gl="git log --oneline"
 alias glb="git log --branches=* --oneline"
-# alias notes="code ~/dev/notes"
 alias katas="code ~/dev/codekatas/python"
+alias dev=$GITHUB
 
 alias profile="code ~/.zshrc"
 alias images="docker images"
@@ -127,29 +147,28 @@ alias autofinder="code $HOME/dev/github.com/maxkimambo/autofinder.code-workspace
 alias up="docker-compose up"
 alias down="docker-compose down"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# custom aliases section 
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias gs="git status"
+alias push="git push"
+alias gl="git log --oneline"
+alias glb="git log --branches=* --oneline"
+
+alias dev="cd $GITHUB"
+alias notes="code -n $GITHUB/notes/"
+alias profile="code $GITHUB/dotfiles/.bashrc"
+alias refresh="source $GITHUB/dotfiles/.bashrc"
+alias project="code $GITHUB/autofinder/autofinder_project.code-workspace"
+alias dc="docker-compose"
+alias images="docker images"
+alias new_env="conda create python=3.8 --name"
+alias ..="cd .."
+alias ...="cd ../.."
+alias .="pwd"
 
 
-export SCALEWAY_ORGANIZATION=1e3cab47-d5b8-4558-bd9a-21925f904bce
-export SCALEWAY_ACCESS_KEY=34500a36-9196-4a24-87a4-e05541631fe6
-
-export SCW_ACCESS_KEY=SCW645BEV359W76372MV 
-export SCW_SECRET_KEY=9e15f254-a156-4c54-9242-6a8cd3ba6ab6
-
-export HCLOUD_TOKEN=wmTuYzmzTyEez4QBAvmZpaTiFbvyhD9xdF0XZfYkNP6jkDToEalQOwttRFRPlaDE
-export GOOGLE_APPLICATION_CREDENTIALS="/Users/max/dev/autofinder/infrastructure/service-account.json"
-
-export GOPATH=$HOME/dev/go
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
-
-#JAVA 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-13.0.2.jdk/Contents/Home
-export M2_HOME=/usr/local/Cellar/maven/3.6.3/libexec
-export PATH=$PATH:M2_HOME/bin
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/max/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"

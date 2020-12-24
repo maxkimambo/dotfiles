@@ -130,7 +130,9 @@ export token="eyJhbGciOiJSUzI1NiIsImtpZCI6IlVrLWk2WHV4MGpFa2NOdFZsYlBLT0RTNURtQj
 
 
 # custom aliases section 
-
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 alias gs="git status"
 alias commit="git commit -m"
 alias push="git push"
