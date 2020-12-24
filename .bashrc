@@ -120,6 +120,15 @@ fi
 
 export GITHUB="$HOME/dev/github.com/maxkimambo"
 export PATH="$GITHUB/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+
+
+export KUBECONFIG="$GITHUB/dotfiles/.kube/config.yaml"
+
+export token="eyJhbGciOiJSUzI1NiIsImtpZCI6IlVrLWk2WHV4MGpFa2NOdFZsYlBLT0RTNURtQjhTRXBSQUl1WmxFNDlKNHcifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJhZG1pbi10b2tlbi02Zzk1cyIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50Lm5hbWUiOiJhZG1pbiIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjU0MjE4NTM1LTY2ZGQtNDgxNy05MjgyLTEyZmZlZjkzZmYyOCIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDprdWJlcm5ldGVzLWRhc2hib2FyZDphZG1pbiJ9.XsiCiiw91P0rkSdcSBrZQGKXcPPza7DelQJ22SBnuVy4C3rd5UKLylixQKEc1T3mtaxOOwqyBwjtatDQXGh8th8AAs_gpMJezeL2RMK6GHO8ANvvpbOsO56MjJqtMaf3UWhXpITvwjQfsan2vbkQuc0ssgFmwfTLplwSGa8mgvJJ59Fz5-Da-boQsNharDgZAT21CC1dKwmcBzg7a_EG-YjyGTF6mDDpQNa7HuoI6UeqV9c9xRSEISRTF2VZ63qOO4S3VGyz-hxgjuF6WsGCx7kl4TCwrIOfMqcmFZaFHR-_-R7aAouhi3RH5s9pSh9m-l6_-rMkUljb_-S5Hsv2aA"
+
+
 # custom aliases section 
 
 alias gs="git status"
@@ -139,7 +148,11 @@ alias new_env="conda create python=3.8 --name"
 alias ..="cd .."
 alias ...="cd ../.."
 alias .="pwd"
-
+alias envs="conda env list"
+alias newenv="conda create python=3.8 --name "
+alias k="k9s -n autofinder"
+alias get_token="kubectl -n kubernetes-dashboard describe secret admin-token | grep ^token"
+alias proxy="kubectl proxy"
 # end custom aliases 
 
 # >>> conda initialize >>>
