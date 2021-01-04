@@ -122,7 +122,7 @@ export KUBECONFIG="$GITHUB/dotfiles/kube/config.yaml"
 
 
 #JAVA 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-13.0.2.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
 export M2_HOME=/usr/local/Cellar/maven/3.6.3/libexec
 export PATH=$PATH:M2_HOME/bin
 
