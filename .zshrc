@@ -116,14 +116,14 @@ export GOPATH=$HOME/dev/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
-
+export PATH=$PATH:/Users/kimambo/bin/apache-maven-3.6.3/bin
 ## Kubectl 
 export KUBECONFIG="$GITHUB/dotfiles/kube/config.yaml"
 
 
 #JAVA 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
-export M2_HOME=/usr/local/Cellar/maven/3.6.3/libexec
+export M2_HOME=/Users/kimambo/bin/apache-maven-3.6.3
 export PATH=$PATH:M2_HOME/bin
 
 alias todo="code $HOME/notes/todos.txt"
