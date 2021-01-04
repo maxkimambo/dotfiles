@@ -117,6 +117,10 @@ export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
+## Kubectl 
+export KUBECONFIG="$GITHUB/dotfiles/kube/config.yaml"
+
+
 #JAVA 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-13.0.2.jdk/Contents/Home
 export M2_HOME=/usr/local/Cellar/maven/3.6.3/libexec
@@ -158,8 +162,8 @@ alias glb="git log --branches=* --oneline"
 
 alias dev="cd $GITHUB"
 alias notes="code -n $GITHUB/notes/"
-alias profile="code $GITHUB/dotfiles/.bashrc"
-alias refresh="source $GITHUB/dotfiles/.bashrc"
+alias profile="code $GITHUB/dotfiles/.zshrc"
+alias refresh="source $GITHUB/dotfiles/.zshrc"
 alias project="code $GITHUB/autofinder/autofinder_project.code-workspace"
 alias dc="docker-compose"
 alias images="docker images"
