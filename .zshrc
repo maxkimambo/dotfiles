@@ -171,7 +171,8 @@ alias new_env="conda create python=3.8 --name"
 alias ..="cd .."
 alias ...="cd ../.."
 alias .="pwd"
-
+alias pods="kubectl get pods -n autofinder"
+alias pods-all="kubectl get pods --all-namespaces"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
