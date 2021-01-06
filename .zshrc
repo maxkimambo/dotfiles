@@ -199,14 +199,14 @@ remove_images() {
     docker images --format "table {{.ID}}\t{{.Repository}}" |grep -i "$1" | awk '{print $1}' |xargs docker rmi -f
 }
 
+export PATH="/Users/kimambo/bin/google-cloud-sdk/bin:$PATH"
 
+# # The next line updates PATH for the Google Cloud SDK.
+# if [ -f "$HOME/bin/google-cloud-sdk/path.zsh.inc" ]; 
+#     then export PATH="$HOME/bin/google-cloud-sdk/path.zsh.inc"$PATH; 
+# fi
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/bin/google-cloud-sdk/path.zsh.inc" ]; 
-    then export PATH="$HOME/bin/google-cloud-sdk/path.zsh.inc"$PATH; 
-fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f "$HOME/bin/google-cloud-sdk/completion.zsh.inc" ]; 
-    then . "$HOME/bin/google-cloud-sdk/completion.zsh.inc"; 
-fi
+# # The next line enables shell command completion for gcloud.
+# if [ -f "$HOME/bin/google-cloud-sdk/completion.zsh.inc" ]; 
+#     then export PATH="$HOME/bin/google-cloud-sdk/completion.zsh.inc"$PATH; 
+# fi
