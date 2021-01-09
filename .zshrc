@@ -168,6 +168,7 @@ alias project="code $GITHUB/autofinder/autofinder_project.code-workspace"
 alias dc="docker-compose"
 alias images="docker images"
 alias new_env="conda create python=3.8 --name"
+alias list_env="conda env list"
 alias ..="cd .."
 alias ...="cd ../.."
 alias .="pwd"
@@ -176,14 +177,14 @@ alias pods-all="kubectl get pods --all-namespaces"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/max/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/kimambo/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/max/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/max/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/kimambo/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/kimambo/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/max/miniconda3/bin:$PATH"
+        export PATH="/Users/kimambo/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
