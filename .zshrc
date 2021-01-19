@@ -179,6 +179,8 @@ alias pods-all="kubectl get pods --all-namespaces"
 alias gcloud-list="gcloud config configurations list"
 alias gcloud-private="gcloud config configurations activate private"
 alias gcloud-work="gcloud config configurations activate google"
+
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/kimambo/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
