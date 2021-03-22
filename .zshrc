@@ -120,6 +120,10 @@ export PATH=$PATH:/Users/kimambo/bin/apache-maven-3.6.3/bin
 ## Kubectl 
 export KUBECONFIG="$GITHUB/dotfiles/kube/config.yaml"
 
+## nvm 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #JAVA 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
