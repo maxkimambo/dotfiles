@@ -222,3 +222,5 @@ export GOOGLE_APPLICATION_CREDENTIALS="$HOME/bin/keys/kimambo_sa.json"
 # if [ -f "$HOME/bin/google-cloud-sdk/completion.zsh.inc" ]; 
 #     then export PATH="$HOME/bin/google-cloud-sdk/completion.zsh.inc"$PATH; 
 # fi
+
+export PATH="$HOME/.poetry/bin:$PATH"
