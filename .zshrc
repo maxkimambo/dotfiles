@@ -143,7 +143,7 @@ alias push="git push"
 alias gl="git log --oneline"
 alias glb="git log --branches=* --oneline"
 alias katas="code ~/dev/codekatas/python"
-alias dev=$GITHUB
+# alias dev=$GITHUB
 
 alias profile="code ~/.zshrc"
 alias images="docker images"
@@ -165,6 +165,7 @@ alias gl="git log --oneline"
 alias glb="git log --branches=* --oneline"
 
 alias dev="cd $GITHUB"
+alias msc="cd $GITHUB/msc"
 alias notes="code -n $GITHUB/notes/"
 alias profile="code $GITHUB/dotfiles/.zshrc"
 alias refresh="source $GITHUB/dotfiles/.zshrc"
