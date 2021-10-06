@@ -1,3 +1,8 @@
+export GOOGLE_CLIENT_ID=722446480623-g0djujsokv4dki0vbunehaqmomt6hpu1.apps.googleusercontent.com
+export GOOGLE_CLIENT_SECRET=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
+export SECRET_KEY=supersecret
+
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/bin/brew":$PATH 
