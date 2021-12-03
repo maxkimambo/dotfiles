@@ -132,7 +132,8 @@ export NVM_DIR="$HOME/.nvm"
 
 #JAVA 
 # export JAVA_HOME="/usr/libexec/java_home -v 11.0.6+10-LTS"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/liberica-jdk-11-full.jdk/Contents/Home
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/liberica-jdk-11-full.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/liberica-jdk-17.jdk/Contents/Home
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
 export M2_HOME=/Users/kimambo/bin/apache-maven-3.6.3
 export PATH=$PATH:M2_HOME/bin
