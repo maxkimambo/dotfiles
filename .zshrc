@@ -210,10 +210,6 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/max/.sdkman"
-[[ -s "/Users/max/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/max/.sdkman/bin/sdkman-init.sh"
-
 # deletes docker images matching a given name pattern
 remove_images() {
     docker images --format "table {{.ID}}\t{{.Repository}}" |grep -i "$1" | awk '{print $1}' |xargs docker rmi -f
@@ -233,3 +229,8 @@ export PATH="/Users/kimambo/bin/google-cloud-sdk/bin:$PATH"
 # fi
 
 export PATH="$HOME/.poetry/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/max/.sdkman"
+[[ -s "/Users/max/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/max/.sdkman/bin/sdkman-init.sh"
+
