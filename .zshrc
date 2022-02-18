@@ -220,7 +220,7 @@ remove_images() {
 }
 
 export PATH="/Users/kimambo/bin/google-cloud-sdk/bin:$PATH"
-export GOOGLE_APPLICATION_CREDENTIALS="$HOME/bin/keys/kimambo_sa.json"
+# export GOOGLE_APPLICATION_CREDENTIALS="$HOME/bin/keys/kimambo_sa.json"
 
 # # The next line updates PATH for the Google Cloud SDK.
 # if [ -f "$HOME/bin/google-cloud-sdk/path.zsh.inc" ]; 
