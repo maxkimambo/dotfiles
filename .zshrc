@@ -143,13 +143,6 @@ alias todo="code $HOME/notes/todos.txt"
 # alias token="$(kubectl get secret $(kubectl get serviceaccount default -o jsonpath='{.secrets[0].name}')  -o jsonpath='{.data.token}' | base64 --decode)"
 alias tf="terraform"
 alias g="gcloud"
-alias gs="git status"
-alias commit="git commit -m"
-alias gc="git commit -m"
-alias add="git add ."
-alias push="git push"
-alias gl="git log --oneline"
-alias glb="git log --branches=* --oneline"
 alias katas="code ~/dev/codekatas/python"
 # alias dev=$GITHUB
 
@@ -167,10 +160,7 @@ alias down="docker-compose down"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias gs="git status"
-alias push="git push"
-alias gl="git log --oneline"
-alias glb="git log --branches=* --oneline"
+
 
 alias dev="cd $GITHUB"
 alias msc="cd $GITHUB/msc"
@@ -189,10 +179,26 @@ alias pods="kubectl get pods -n autofinder"
 alias pods-all="kubectl get pods --all-namespaces"
 
 
+
+#Git aliases. 
+alias gs="git status"
+alias push="git push"
+alias gl="git log --oneline"
+alias glb="git log --branches=* --oneline"
+alias glp="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias branches="git branch -r"
+alias gb="branches"
+
+#GCP 
+alias edit="gcloudshell edit"
+alias identity-token="gcloud auth print-identity-token"
+alias auth-token="gcloud auth print-access-token"
+alias access-token="auth-token"
+alias set-project="gcloud config set project gnd-kimambo"
+alias start="nvm use stable && set-project"
 alias gcloud-list="gcloud config configurations list"
 alias gcloud-private="gcloud config configurations activate private"
 alias gcloud-work="gcloud config configurations activate google"
-
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
