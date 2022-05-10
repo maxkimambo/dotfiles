@@ -175,9 +175,8 @@ alias list-envs="conda env list"
 alias ..="cd .."
 alias ...="cd ../.."
 alias .="pwd"
-alias pods="kubectl get pods -n autofinder"
 alias pods-all="kubectl get pods --all-namespaces"
-
+alias new-pass="openssl rand -base64 12"
 
 
 #Git aliases. 
@@ -204,7 +203,6 @@ alias gcloud-work="gcloud config configurations activate google"
 alias k="kubectl"
 alias pods="kubectl get pods"
 alias service="kubectl get services --all-namespaces"
-
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
