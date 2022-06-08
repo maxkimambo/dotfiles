@@ -29,7 +29,7 @@ alias g="gcloud"
 alias katas="code ~/dev/codekatas/python"
 # alias dev=$GITHUB
 
-alias profile="code ~/.zshrc"
+alias profile="code $GITHUB/dotfiles/aliases"
 alias images="docker images"
 alias dps="docker ps -a"
 alias refresh="source ~/.zshrc"
@@ -46,11 +46,8 @@ alias l='ls -CF'
 
 
 alias dev="cd $GITHUB"
-alias msc="cd $GITHUB/msc"
 alias notes="code -n $GITHUB/notes/"
-alias profile="code $GITHUB/dotfiles/.zshrc"
 alias refresh="source $GITHUB/dotfiles/.zshrc"
-alias project="code $GITHUB/autofinder/autofinder_project.code-workspace"
 alias dc="docker-compose"
 alias images="docker images"
 alias new-env="conda create python=3.8 --name"
@@ -60,7 +57,6 @@ alias ...="cd ../.."
 alias .="pwd"
 alias pods-all="kubectl get pods --all-namespaces"
 alias new-pass="openssl rand -base64 12"
-
 
 #Git aliases. 
 alias gs="git status"
