@@ -43,18 +43,24 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-
+#navigation commands
 alias dev="cd $GITHUB"
-alias notes="code -n $GITHUB/notes/"
-alias refresh="source $GITHUB/dotfiles/.zshrc"
-alias dc="docker-compose"
-alias images="docker images"
-alias new-env="conda create python=3.8 --name"
-alias list-envs="conda env list"
 alias ..="cd .."
 alias ...="cd ../.."
 alias .="pwd"
+
+#utilities
+alias notes="code -n $GITHUB/notes/"
+alias refresh="source $GITHUB/dotfiles/.zshrc"
+alias new-env="conda create python=3.8 --name"
+alias list-envs="conda env list"
 alias new-pass="openssl rand -base64 12"
+
+
+#docker 
+alias dc="docker-compose"
+alias images="docker images"
+
 
 #Git aliases. 
 alias gs="git status"
@@ -75,7 +81,7 @@ alias start="nvm use stable && set-project"
 alias gcloud-list="gcloud config configurations list"
 alias gcloud-private="gcloud config configurations activate private"
 alias gcloud-work="gcloud config configurations activate google"
-alias glogin="gcloud auth login"
+alias gcloud-login="gcloud auth login"
 
 #K8s 
 alias k="kubectl"
