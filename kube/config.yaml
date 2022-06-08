@@ -29,10 +29,10 @@ users:
   user:
     auth-provider:
       config:
-        access-token: ya29.a0ARrdaM9MvlPyCR5mDsTbujEvMGSBfat5rN4wEcxIHoHogCaoECEUSKll85avkRoZRsXogfJRGgBkn9nz9rI253V_VRzZ9KeY4ngI-YuSsPsjWlHY77HllyGqf3078zwUBYbKBEgxDZClVADpKqaaxuWW0TnIOGAewM_r
+        access-token: ya29.a0ARrdaM_cO6eCzp-qSlFOPz40QYEFF18WFIR4yDuqE9-WA_BJd3X_XC8HmSXfHwRTjdHlZ45kSnqWbcSmu5X7AOGIHoMYYRJoETmnhmJeevj2e0J48psKaqab3RsuFII-z6-YgssxqSFtnF-NXMb4Tl-yjEj44hSmVYoC
         cmd-args: config config-helper --format=json
         cmd-path: /Users/kimambo/bin/google-cloud-sdk/bin/gcloud
-        expiry: "2022-06-08T14:51:03Z"
+        expiry: "2022-06-08T16:04:33Z"
         expiry-key: '{.credential.token_expiry}'
         token-key: '{.credential.access_token}'
       name: gcp
