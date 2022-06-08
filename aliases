@@ -7,7 +7,6 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:/Users/kimambo/bin/apache-maven-3.6.3/bin
 
-
 ## nvm 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -55,7 +54,6 @@ alias list-envs="conda env list"
 alias ..="cd .."
 alias ...="cd ../.."
 alias .="pwd"
-alias pods-all="kubectl get pods --all-namespaces"
 alias new-pass="openssl rand -base64 12"
 
 #Git aliases. 
@@ -83,3 +81,6 @@ alias glogin="gcloud auth login"
 alias k="kubectl"
 alias pods="kubectl get pods"
 alias service="kubectl get services --all-namespaces"
+alias pods-all="kubectl get pods --all-namespaces"
+alias nodes="kubectl get nodes"
+alias deployments="kubectl get deployments"
