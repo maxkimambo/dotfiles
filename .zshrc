@@ -198,6 +198,7 @@ alias start="nvm use stable && set-project"
 alias gcloud-list="gcloud config configurations list"
 alias gcloud-private="gcloud config configurations activate private"
 alias gcloud-work="gcloud config configurations activate google"
+alias glogin="gcloud auth login"
 
 #K8s 
 alias k="kubectl"
