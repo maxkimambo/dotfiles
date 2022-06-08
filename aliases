@@ -20,23 +20,16 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/liberica-jdk-17-full.jdk/Cont
 export M2_HOME=/Users/kimambo/bin/apache-maven-3.6.3
 export PATH=$PATH:M2_HOME/bin
 
-alias todo="code $HOME/notes/todos.txt"
 # alias secret="echo $(kubectl get serviceaccount default -o jsonpath='{.secrets[0].name}')"
 # alias token="$(kubectl get secret $(kubectl get serviceaccount default -o jsonpath='{.secrets[0].name}')  -o jsonpath='{.data.token}' | base64 --decode)"
 alias tf="terraform"
 alias g="gcloud"
-alias katas="code ~/dev/codekatas/python"
-# alias dev=$GITHUB
-
 alias profile="code $GITHUB/dotfiles/aliases"
-alias images="docker images"
-alias dps="docker ps -a"
+
 alias refresh="source ~/.zshrc"
 alias pbc="pbcopy"
 alias pbp="pbpaste"
-alias autofinder="code $HOME/dev/github.com/maxkimambo/autofinder.code-workspace"
-alias up="docker-compose up"
-alias down="docker-compose down"
+
 
 # custom aliases section 
 alias ll='ls -alF'
@@ -50,6 +43,7 @@ alias ...="cd ../.."
 alias .="pwd"
 
 #utilities
+alias todo="code $HOME/notes/todos.txt"
 alias notes="code -n $GITHUB/notes/"
 alias refresh="source $GITHUB/dotfiles/.zshrc"
 alias new-env="conda create python=3.8 --name"
@@ -60,7 +54,9 @@ alias new-pass="openssl rand -base64 12"
 #docker 
 alias dc="docker-compose"
 alias images="docker images"
-
+alias up="docker-compose up"
+alias down="docker-compose down"
+alias dps="docker ps -a"
 
 #Git aliases. 
 alias gs="git status"
