@@ -222,7 +222,7 @@ unset __conda_setup
 
 
 # deletes docker images matching a given name pattern
-remove_images() {
+remove-images() {
     docker images --format "table {{.ID}}\t{{.Repository}}" |grep -i "$1" | awk '{print $1}' |xargs docker rmi -f
 }
 
