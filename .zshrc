@@ -12,7 +12,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/Users/kimambo/bin/homebrew/bin":$PATH 
 source /Users/kimambo/bin/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
-source /Users/kimambo/dev/github.com/maxkimambo/dotfiles/aliases
+source /Users/kimambo/dev/github.com/maxkimambo/dotfiles/aliases.sh
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
