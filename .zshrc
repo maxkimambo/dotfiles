@@ -115,3 +115,5 @@ source $ZSH/oh-my-zsh.sh
 
 source /Users/kimambo/bin/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /Users/kimambo/bin/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /Users/kimambo/bin/homebrew/bin/terraform terraform
