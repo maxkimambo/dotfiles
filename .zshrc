@@ -7,10 +7,11 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+source ~/.bash_profile
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="/Users/kimambo/bin/homebrew/bin":$PATH
+export PATH="$HOME/bin/homebrew/bin:$PATH"
 export GITHUB="$HOME/dev/github.com/maxkimambo"
 export PATH="$GITHUB/bin:$PATH"
 export PATH="$HOME/bin/google-cloud-sdk/bin:$PATH"
@@ -32,6 +33,8 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/liberica-jdk-17-full.jdk/Cont
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
 export M2_HOME=/Users/kimambo/bin/apache-maven-3.6.3
 export PATH=$PATH:M2_HOME/bin
+
+
 source /Users/kimambo/bin/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 source /Users/kimambo/dev/github.com/maxkimambo/dotfiles/aliases.sh
 # Set name of the theme to load --- if set to "random", it will
