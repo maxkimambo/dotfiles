@@ -10,7 +10,28 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="/Users/kimambo/bin/homebrew/bin":$PATH 
+export PATH="/Users/kimambo/bin/homebrew/bin":$PATH
+export GITHUB="$HOME/dev/github.com/maxkimambo"
+export PATH="$GITHUB/bin:$PATH"
+export PATH="$HOME/bin/google-cloud-sdk/bin:$PATH"
+export GOPATH=$HOME/dev/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:/Users/kimambo/bin/apache-maven-3.6.3/bin
+
+## nvm 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#JAVA 
+# export JAVA_HOME="/usr/libexec/java_home -v 11.0.6+10-LTS"
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/liberica-jdk-11-full.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/liberica-jdk-17-full.jdk/Contents/Home
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
+export M2_HOME=/Users/kimambo/bin/apache-maven-3.6.3
+export PATH=$PATH:M2_HOME/bin
 source /Users/kimambo/bin/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 source /Users/kimambo/dev/github.com/maxkimambo/dotfiles/aliases.sh
 # Set name of the theme to load --- if set to "random", it will
