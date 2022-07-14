@@ -26,11 +26,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #GCP 
-export ZONE="europe-central2"
+export REGION="europe-central2"
+export ZONE="europe-central2-a"
 export PROJECT_ID="kthw-356311"
 export CLOUDSDK_CORE_PROJECT="kthw-356311"
-
-
+export CLOUDSDK_COMPUTE_ZONE=$ZONE
+export CLOUDSDK_COMPUTE_REGION=$REGION
 #JAVA 
 # export JAVA_HOME="/usr/libexec/java_home -v 11.0.6+10-LTS"
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/liberica-jdk-11-full.jdk/Contents/Home
