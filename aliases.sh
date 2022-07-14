@@ -1,7 +1,7 @@
 # alias secret="echo $(kubectl get serviceaccount default -o jsonpath='{.secrets[0].name}')"
 # alias token="$(kubectl get secret $(kubectl get serviceaccount default -o jsonpath='{.secrets[0].name}')  -o jsonpath='{.data.token}' | base64 --decode)"
 alias tf="terraform"
-alias g="gcloud"
+
 
 alias pbc="pbcopy"
 alias pbp="pbpaste"
@@ -45,7 +45,8 @@ alias glp="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset 
 alias branches="git branch -r"
 alias gb="branches"
 
-#GCP 
+#GCP
+alias g="gcloud"
 alias edit="gcloudshell edit"
 alias identity-token="gcloud auth print-identity-token"
 alias auth-token="gcloud auth print-access-token"
