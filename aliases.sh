@@ -65,3 +65,5 @@ alias service="kubectl get services --all-namespaces"
 alias pods-all="kubectl get pods --all-namespaces"
 alias nodes="kubectl get nodes"
 alias deployments="kubectl get deployments"
+
+source "/Users/kimambo/.sdkman/bin/sdkman-init.sh"
