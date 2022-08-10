@@ -29,7 +29,7 @@ export NVM_DIR="$HOME/.nvm"
 export REGION="europe-central2"
 export ZONE="europe-central2-a"
 export PROJECT_ID="kimambo-cka-356513"
-export CLOUDSDK_CORE_PROJECT=$PROJECT_ID
+#export CLOUDSDK_CORE_PROJECT=$PROJECT_ID
 export CLOUDSDK_COMPUTE_ZONE=$ZONE
 export CLOUDSDK_COMPUTE_REGION=$REGION
 #JAVA 
