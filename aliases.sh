@@ -27,7 +27,7 @@ alias notes="code -n $GITHUB/notes/"
 alias new-env="conda create python=3.8 --name"
 alias list-envs="conda env list"
 alias new-pass="openssl rand -base64 12"
-
+alias study="cd /Users/kimambo/dev/github.com/maxkimambo/coursera/accelerated_cs_fundamentals_illinois"
 
 #docker 
 alias dc="docker-compose"
