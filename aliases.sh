@@ -1,7 +1,8 @@
 # alias secret="echo $(kubectl get serviceaccount default -o jsonpath='{.secrets[0].name}')"
 # alias token="$(kubectl get secret $(kubectl get serviceaccount default -o jsonpath='{.secrets[0].name}')  -o jsonpath='{.data.token}' | base64 --decode)"
 alias tf="terraform"
-
+alias tfa="terraform apply --auto-approve"
+alias tfd="terraform destroy --auto-approve"
 
 alias pbc="pbcopy"
 alias pbp="pbpaste"
