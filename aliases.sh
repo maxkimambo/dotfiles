@@ -67,4 +67,6 @@ alias pods-all="kubectl get pods --all-namespaces"
 alias nodes="kubectl get nodes"
 alias deployments="kubectl get deployments"
 
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
 source "/Users/kimambo/.sdkman/bin/sdkman-init.sh"
