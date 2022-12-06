@@ -1,6 +1,6 @@
 # alias secret="echo $(kubectl get serviceaccount default -o jsonpath='{.secrets[0].name}')"
 # alias token="$(kubectl get secret $(kubectl get serviceaccount default -o jsonpath='{.secrets[0].name}')  -o jsonpath='{.data.token}' | base64 --decode)"
-export GOOGLE_CREDENTIALS=/Users/kimambo/dev/github.com/maxkimambo/hornbach/asm_only/project-admin.json
+
 
 alias tf="terraform"
 alias tfa="terraform apply --auto-approve"
