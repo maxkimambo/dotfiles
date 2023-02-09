@@ -149,4 +149,4 @@ export PATH=$PATH:$HOME/bin/google-cloud-sdk/bin
 #if [ -f '/Users/kimambo/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kimambo/bin/google-cloud-sdk/completion.zsh.inc'; fi
 
 export XDG_CONFIG_HOME=$HOME/dev/github.com/maxkimambo/dotfiles/.config
-source /Users/kimambo/dev/github.com/maxkimambo/dotfiles/aliases.sh
+source /Users/kimambo/dev/github.com/maxkimambo/dotfiles/env.sh
