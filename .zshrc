@@ -25,7 +25,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
+ZSH_THEME="powerlevel10k/powerlevel10k"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -109,8 +109,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source $HOME/powerlevel10k/powerlevel10k.zsh-theme
-ZSH_THEME="powerlevel10k/powerlevel10k"
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 
@@ -148,5 +146,9 @@ export PATH=$PATH:$HOME/bin/google-cloud-sdk/bin
 # The next line enables shell command completion for gcloud.
 #if [ -f '/Users/kimambo/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kimambo/bin/google-cloud-sdk/completion.zsh.inc'; fi
 
-export XDG_CONFIG_HOME=$HOME/dev/github.com/maxkimambo/dotfiles/.config
+
 source /Users/kimambo/dev/github.com/maxkimambo/dotfiles/env.sh
+export XDG_CONFIG_HOME=$HOME/dev/github.com/maxkimambo/dotfiles/.config
+source $(brew --prefix powerlevel10k)/powerlevel10k.zsh-theme
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
