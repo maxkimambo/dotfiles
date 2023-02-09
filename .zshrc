@@ -6,41 +6,19 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-export PATH="$HOME/bin:$PATH"
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="$HOME/bin/homebrew/bin:$PATH"
-export GITHUB="$HOME/dev/github.com/maxkimambo"
-export PATH="$GITHUB/bin:$PATH"
-export PATH="$HOME/bin/google-cloud-sdk/bin:$PATH"
-export GOPATH=$HOME/dev/go
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
-export PATH=$PATH:/Users/kimambo/bin/apache-maven-3.6.3/bin
 
-## nvm 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-#JAVA 
-# export JAVA_HOME="/usr/libexec/java_home -v 11.0.6+10-LTS"
-# export JAVA_HOME=/Library/Java/JavaVirtualMachines/liberica-jdk-11-full.jdk/Contents/Home
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/liberica-jdk-17-full.jdk/Contents/Home
-# export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
-export M2_HOME=/Users/kimambo/bin/apache-maven-3.6.3
-export PATH=$PATH:M2_HOME/bin
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 
-source /Users/kimambo/bin/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
-source /Users/kimambo/dev/github.com/maxkimambo/dotfiles/aliases.sh
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -49,7 +27,7 @@ ZSH_THEME="robbyrussell"
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
+# CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -64,7 +42,7 @@ CASE_SENSITIVE="true"
 # zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-DISABLE_MAGIC_FUNCTIONS="true"
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -114,11 +92,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='mvim'
+ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -131,32 +109,44 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source $HOME/powerlevel10k/powerlevel10k.zsh-theme
+ZSH_THEME="powerlevel10k/powerlevel10k"
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
+
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=$(brew --prefix)/share/zsh-syntax-highlighting/highlighters
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /Users/kimambo/bin/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+autoload -U +X bashcompinit && bashcompinit
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-source /Users/kimambo/bin/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /Users/kimambo/bin/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /Users/kimambo/bin/homebrew/bin/terraform terraform
 
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/kimambo/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/kimambo/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/kimambo/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/kimambo/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/kimambo/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/kimambo/opt/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/kimambo/miniconda3/bin:$PATH"
+        export PATH="/Users/kimambo/opt/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+#add gcloud to path 
+export PATH=$PATH:$HOME/bin/google-cloud-sdk/bin 
+# The next line enables shell command completion for gcloud.
+#if [ -f '/Users/kimambo/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/kimambo/bin/google-cloud-sdk/completion.zsh.inc'; fi
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export XDG_CONFIG_HOME=$HOME/dev/github.com/maxkimambo/dotfiles/.config
+source /Users/kimambo/dev/github.com/maxkimambo/dotfiles/aliases.sh

@@ -130,31 +130,7 @@ export token="eyJhbGciOiJSUzI1NiIsImtpZCI6IlVrLWk2WHV4MGpFa2NOdFZsYlBLT0RTNURtQj
 
 
 # custom aliases section 
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-alias gs="git status"
-alias commit="git commit -m"
-alias push="git push"
-alias gl="git log --oneline"
-alias glb="git log --branches=* --oneline"
-
-alias dev="cd $GITHUB"
-alias notes="code -n $GITHUB/notes/"
-alias profile="code $GITHUB/dotfiles/.bashrc"
-alias refresh="source $GITHUB/dotfiles/.bashrc"
-alias project="code $GITHUB/autofinder/autofinder_project.code-workspace"
-alias dc="docker-compose"
-alias images="docker images"
-alias new_env="conda create python=3.8 --name"
-alias ..="cd .."
-alias ...="cd ../.."
-alias .="pwd"
-alias envs="conda env list"
-alias newenv="conda create python=3.8 --name "
-alias k="k9s -n autofinder"
-alias get_token="kubectl -n kubernetes-dashboard describe secret admin-token | grep ^token"
-alias proxy="kubectl proxy"
+source /Users/kimambo/dev/github.com/maxkimambo/dotfiles/aliases.sh
 # end custom aliases 
 
 # >>> conda initialize >>>
