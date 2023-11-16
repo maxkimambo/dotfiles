@@ -14,7 +14,9 @@ set incsearch                 " Incremental search
 set hlsearch                  " Highlight search results
 set scrolloff=10              " Keep 10 lines when scrolling
 set clipboard=unnamedplus     " Use system clipboard
-
+set ignorecase                 " ignore case during search
+set showmode
+set ruler
 " Disable backup files
 set nobackup                  " Do not keep a backup file
 set noswapfile                " Do not use swap file
@@ -23,10 +25,15 @@ set noswapfile                " Do not use swap file
 @REM nnoremap <C-s> :w<CR>         " Ctrl + S to save
 @REM nnoremap <C-q> :q<CR>         " Ctrl + Q to quit
 @REM nnoremap <C-a> ggVG           " Ctrl + A to select all
-
+inoremap jk <Esc>                  " remapping jk as esc to enter normal mode quicker
+noremap <F2> :registers            " lists all registers
 " Colorscheme
-colorscheme desert            " Default desert colorscheme
+colorscheme zaibatsu            " set colorscheme
 set background=dark           " Dark background
 
 " Turn off line wrapping
 set nowrap
+
+" File explorer
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 20

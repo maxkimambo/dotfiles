@@ -15,6 +15,7 @@ files_to_link=(bashrc vimrc gitconfig git_ignore_global)
 
 # Loop through the list and create symlinks
 for file in "${files_to_link[@]}"; do
+  mv .$file .$file.bak
   link_file $file .$file
 done
 

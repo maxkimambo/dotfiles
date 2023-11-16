@@ -33,8 +33,9 @@ alias swe="code $GITHUB/google-swe"
 alias add-alias="vim $GITHUB/dotfiles/aliases.inc"
 alias add-env="vim $GITHUB/dotfiles/env.inc"
 
-alias notes="vim $GITHUB/notes/notes.txt"
+alias notes="vim $GITHUB/notes/notes.md"
 alias dotfiles="cd $GITHUB/dotfiles"
+alias vimrc="vim $GITHUB/dotfiles/vimrc"
 
 function set-token(){
     export VAULT_TOKEN=$1
