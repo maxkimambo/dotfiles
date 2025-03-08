@@ -1,60 +1,56 @@
-alias ct="gcert && ssh cloudtop"
-alias ls="ls --color=auto"
+# General
+alias ll="ls -laF --color=auto"
+alias la="ls -A --color=auto"
+alias l="ls -CF --color=auto"
 alias grep="grep --color=auto"
-alias ll="ls -la"
-alias gtp="git push"
-alias gtp="git pull"
-alias gtc="git commit -m"
-alias gts="git status"
-alias profile="vim $HOME/.bash_profile"
-alias refresh="source ~/.bash_profile"
-alias sshc="vim ~/.ssh/config"
 alias pbc="pbcopy"
 alias pbp="pbpaste"
 
+# Navigation
+alias dev="cd \$GITHUB"
+alias gw="cd \$GOPATH"
+alias ..="cd .."
+alias ...="cd ../.."
+alias .="pwd"
+alias h="cd \$HOME"
+
+# Utilities
+alias profile="code \$GITHUB/dotfiles/aliases.inc"
+alias refresh="source ~/.bashrc"
+alias todo="code \$HOME/notes/todos.txt"
+alias notes="code -n \$GITHUB/notes/"
+alias new-env="conda create python=3.8 --name"
+alias list-envs="conda env list"
+alias new-pass="openssl rand -base64 12"
+
+alias clear-dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+alias ip-local="ipconfig getifaddr en0"
+alias ip-public="curl ifconfig.me"
+
+# Git
+alias gs="git status"
+alias push="git push"
+alias pull="git pull"
+alias gtc="git commit -m"
+alias gl="git log --oneline"
+alias glb="git log --branches=* --oneline"
+alias glp="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gb="git branch -r"
+
+# GCP
+alias g="gcloud"
+alias set-project="gcloud config set project"
+alias gcloud-login="gcloud auth login"
+
 # Terraform
+alias tf="terraform"
 alias tfa="terraform apply --auto-approve"
 alias tfd="terraform destroy --auto-approve"
-alias tfi="terrform init"
-alias tf="terraform"
 
-# Kubernetes 
+# Kubernetes
 alias k="kubectl"
-
-alias gtl="git log --oneline"
-alias gtlb="git log --branches=* --oneline"
-alias gtlp="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gbr="git branch -r"
-alias gbl="git branch -l"
-
-alias dev="cd $GITHUB"
-alias swe="code $GITHUB/google-swe"
-
-alias add-alias="vim $GITHUB/dotfiles/aliases.inc"
-alias add-env="vim $GITHUB/dotfiles/env.inc"
-
-alias notes="vim $GITHUB/notes/notes.md"
-alias dotfiles="cd $GITHUB/dotfiles"
-alias vimrc="vim $GITHUB/dotfiles/vimrc"
-
-function set-token(){
-    export VAULT_TOKEN=$1
-}
-
-function get-sa-key(){
-    vault read gcp/static-account/bootstrap-user/key --format=json |jq -r .data.private_key_data | base64 -d > $(pwd)/sa.json
-    echo "Generated service account key (sa.json) in $(pwd)"
-}
-
-function set-google-creds(){
-    export GOOGLE_APPLICATION_CREDENTIALS=$1
-    echo "Environment variable GOOGLE_APPLICATION_CREDENTIALS set to " + $1
-    at now + 1 hour -- rm $GOOGLE_APPLICATION_CREDENTIALS
-}
-
-function auth-poc(){
-    set-token $1
-    get-sa-key
-    set-google-creds $(pwd)/sa.json
-}
-
+alias pods="kubectl get pods"
+alias pods-all="kubectl get pods --all-namespaces"
+alias nodes="kubectl get nodes"
+alias deployments="kubectl get deployments"
+alias k-set-ns="kubectl config set-context --current --namespace"

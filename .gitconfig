@@ -1,10 +1,9 @@
 [user]
-	name = Max Kimambo
-	email = max@kimambo.de
+    name = Max Kimambo
+    email = max@kimambo.de
 [core]
-    editor = vim  
-    excludesfile = ~/.git_ignore_global  # Global gitignore file
-
+    editor = vim
+    excludesfile = ~/.git_ignore_global
 [alias]
     st = status
     ci = commit
@@ -14,24 +13,15 @@
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     amend = commit --amend --no-edit
     unstage = reset HEAD --
-
 [color]
     ui = true
-
 [push]
     default = current
-
 [pull]
     rebase = false
-
 [diff]
     tool = vimdiff
-
 [merge]
     tool = vimdiff
-
 [credential]
-    helper = cache --timeout=36000  # Cache credentials for 10 hours
-
-[core]
-    excludesfile = ~/.git_ignore_global
+    helper = cache --timeout=36000

@@ -1,3 +1,7 @@
-#Dotfiles
+# Dotfiles
 
-Clone the repo and run ./install.sh to install the dotfiles.
+## Installation
+
+```bash
+    curl -fsSL https://raw.githubusercontent.com/maxkimambo/dotfiles/main/install.py | python3 - install
+```
