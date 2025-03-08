@@ -88,8 +88,12 @@ def create_symlink(src, dst):
 def install():
     header = print_bordered_message("Installer will now setup your dotfiles")
     log.info(header)
-    print("\t Press Enter to continue or Ctrl-C to exit")
-    input()
+    if sys.stdin.isatty():
+        print("\t Press Enter to continue or Ctrl-C to cancel")
+        log.info("---------------------------")
+        input()
+    else:
+        log.info("Running non-interactively, proceeding automatically")
 
     shell = detect_shell()
     shell_file = get_shell_file()
